@@ -47,7 +47,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:latest
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/zadanie:latest
       
       #Przenies cache'a
       - name: Move cache
