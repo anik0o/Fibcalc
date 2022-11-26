@@ -1,4 +1,3 @@
-name: GitHub Action flow to Docker hub 
 
 name: CI
 on:
