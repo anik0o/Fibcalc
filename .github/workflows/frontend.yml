@@ -31,5 +31,5 @@ jobs:
           file: ./dockerfile.v1
           push: true
           tags: |
-            spg51/lab:ghfrontend1
+            anik0o/full.stack:lab8
           
