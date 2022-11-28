@@ -1,2 +1,2 @@
-# GALab61
-test Actions
+# GALab8
+GitHub Actions - przegląd podstawowych rozwiązań
