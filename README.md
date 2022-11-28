@@ -1,2 +1,2 @@
 # GALab8
-GitHub Actions - przegląd podstawowych rozwiązań z logowankiem
+GitHub Actions - przegląd podstawowych rozwiązań 
