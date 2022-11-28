@@ -43,7 +43,7 @@ jobs:
         with:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
-          platforms: linux/amd64,linux/arm64,linux/s390
+          platforms: linux/amd64,linux/arm64
           context: .
           file: Dockerfile
           push: true
