@@ -3,9 +3,9 @@
 
 ## Podpunkt 1
 
-**Link do repozytorium na GitHubie:**
+**Link do repozytorium na DockerHubie:**
+https://hub.docker.com/repository/docker/anik0o/fibcalc
 
-https://github.com/anik0o/Fibcalc
 
 **Opis algorytmu:**
 
@@ -119,3 +119,11 @@ docker.io/anik0o/fibcalc
 
 Link ghcr.io:
 ghcr.io/anik0o/fibcalc
+
+#Zadanie nieobowiązkowe 1#
+
+Utworzyłam nowy plik Dockerfile_dod1 oraz plik workflowowy fib_dod1.yml. 
+Niestety nie potrafię skonfigurować pliku dockerfilowego do rozwiązania multiplatformowego.
+Po próbie uruchomienia github action, otrzymuję błąd:
+
+![image](https://user-images.githubusercontent.com/94603034/210019544-1fb3f0c3-b06d-416b-ac4e-9fa35f21c196.png)
