@@ -12,6 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            ${{ secrets.DOCKER_HUB_USERNAME }}/fibcalc
+            ghcr.io/${{ secrets.GIT_USERNAME }}/fibcalc
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}.{{patch}}
+
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
         id: buildx
@@ -56,6 +69,6 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:latest, ghcr.io/${{secrets.GIT_USERNAME}}/fibcalc:latest,
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:latest, ghcr.io/${{secrets.GIT_USERNAME}}/fibcalc:latest, ${{ steps.meta.outputs.tags }}
       
     
