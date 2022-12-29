@@ -26,6 +26,11 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}.{{patch}}
+      
+      - name: Workflow dispatcher
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: fib.yaml
 
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
