@@ -44,7 +44,7 @@
                 }
                 ?>
                 <br><br>
-                <p>Uwaga! jeżeli chcemy wyliczyć element powyżej 30 miejsca w ciągu, może wystąpić opóźnienie w wyświetlaniu wyniku, jednak jest on liczony od momentu wciśnięcia przycisku. </p>
+                <p>Uwaga!!! jeżeli chcemy wyliczyć element powyżej 30 miejsca w ciągu, może wystąpić opóźnienie w wyświetlaniu wyniku, jednak jest on liczony od momentu wciśnięcia przycisku. </p>
             </div>
         </form>
     </body>
