@@ -71,6 +71,6 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:latest, ghcr.io/${{secrets.GIT_USERNAME}}/fibcalc:latest, ${{ steps.meta.outputs.tags }}
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:fibcalc, ghcr.io/${{secrets.GIT_USERNAME}}/fibcalc:latest, ${{ steps.meta.outputs.tags }}
       
     
