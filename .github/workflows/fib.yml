@@ -58,8 +58,4 @@ jobs:
           push: true
           tags: ${{secrets.DOCKER_HUB_USERNAME}}/full.stack:latest, ghcr.io/${{secrets.GIT_USERNAME}}/fibcalc:latest,
       
-      #Przenies cache'a
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+    
