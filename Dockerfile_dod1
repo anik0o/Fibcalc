@@ -3,7 +3,7 @@ FROM --platform=$BUILDPLATFORM php:8.0-apache AS build
 COPY ./php/src /var/www/html/
 
 ARG TARGETPLATFORM
-RUN compile --target=$TARGETPLATFORM /php/src
+RUN build --target=$TARGETPLATFORM /php/src
 
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
