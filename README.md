@@ -120,10 +120,13 @@ docker.io/anik0o/fibcalc
 Link ghcr.io:
 ghcr.io/anik0o/fibcalc
 
-#Zadanie nieobowiązkowe 1#
+# Zadanie nieobowiązkowe 1 #
 
 Utworzyłam nowy plik Dockerfile_dod1 oraz plik workflowowy fib_dod1.yml. 
 Niestety nie potrafię skonfigurować pliku dockerfilowego do rozwiązania multiplatformowego.
 Po próbie uruchomienia github action, otrzymuję błąd:
 
 ![image](https://user-images.githubusercontent.com/94603034/210019544-1fb3f0c3-b06d-416b-ac4e-9fa35f21c196.png)
+
+Aby wyświetlić utworzony workflow wykonuję wyświetlenie/wylistowanie workflowów, a następnie wykonuję polecenie `gh workflow view`, aby zobaczyć szczegóły wykonywania danego workflowu:
+![image](https://user-images.githubusercontent.com/94603034/210071011-4a42b308-6ef9-4f50-a280-274cf7260117.png)
