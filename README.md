@@ -72,6 +72,9 @@ Aby wykorzystać metodę nadawania tagów wykorzystuję metadata-action:
 
 ![image](https://user-images.githubusercontent.com/94603034/210010944-f9c1ac1f-09cd-441a-bfe1-0ea7aef886a5.png)
 
+Aby otagować obraz wykonuję kolejne polecenia przedstawione na zrzucie ekranu:
+![image](https://user-images.githubusercontent.com/94603034/210072782-703b0ed8-2e20-4712-893e-9bb246c72ab4.png)
+
 
 W celu wykorzystania ghcr.io w pliku fib.yml dodałam metodę logowania do ghcr.io za pomocą  docker/login-action@v2, następnie przy sekcji odpowiedzialnej za zbudowanie obrazu i przesłanie na DockerHuba dodaję dodatkowy tag, który pozwala na wstawienie obrazu do repozytorium GitHub Packages, 
 
@@ -123,10 +126,16 @@ ghcr.io/anik0o/fibcalc
 # Zadanie nieobowiązkowe 1 #
 
 Utworzyłam nowy plik Dockerfile_dod1 oraz plik workflowowy fib_dod1.yml. 
-Niestety nie potrafię skonfigurować pliku dockerfilowego do rozwiązania multiplatformowego.
-Po próbie uruchomienia github action, otrzymuję błąd:
+Aby rozróżnić obrazy pochodzące z innego workflowu postanowiłam podać nowe repozytorium do Dockerhuba w pliku .yml o nazwie fibcalcdod. W ten sposób łatwiej było mi sprawdzić czy zostanie stworzony obraz na dwie platformy:
+![image](https://user-images.githubusercontent.com/94603034/210072083-2567eddf-5970-4693-8f62-10f2a9f4b106.png)
 
-![image](https://user-images.githubusercontent.com/94603034/210019544-1fb3f0c3-b06d-416b-ac4e-9fa35f21c196.png)
+Github action zostaje wykonane bezproblemów:
+![image](https://user-images.githubusercontent.com/94603034/210072314-7e451e7a-c1cf-4a4a-bcd1-5c80f3bdd166.png)
+
 
 Aby wyświetlić utworzony workflow wykonuję wyświetlenie/wylistowanie workflowów, a następnie wykonuję polecenie `gh workflow view`, aby zobaczyć szczegóły wykonywania danego workflowu:
-![image](https://user-images.githubusercontent.com/94603034/210071011-4a42b308-6ef9-4f50-a280-274cf7260117.png)
+![image](https://user-images.githubusercontent.com/94603034/210072423-c414f370-c5e9-49bd-bafd-6a3e9feb2622.png)
+
+Workflow uruchomiłam dwa razy z sukcesem:
+![image](https://user-images.githubusercontent.com/94603034/210072683-7b05febf-1e6e-4f8f-a2a2-b587dc9e0d97.png)
+
